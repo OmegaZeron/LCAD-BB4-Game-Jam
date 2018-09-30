@@ -185,7 +185,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -229,9 +229,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ab7f3273d57bf44bc2b2f4bb2fbd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 10
   m_right: 100
   m_left: 97
+  m_sprint: 304
+  m_jump: 32
+  m_up: 119
+  m_down: 115
+  m_speed: 10
+  m_sprintSpeed: 15
   m_jumpForce: 4
   m_groundCheck:
   - {fileID: 4886496857888934}
@@ -240,7 +245,4 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  m_jump: 32
-  m_up: 119
-  m_down: 115
   m_climbSpeed: 2

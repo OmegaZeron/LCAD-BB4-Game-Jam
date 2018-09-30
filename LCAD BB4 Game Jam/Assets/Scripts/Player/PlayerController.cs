@@ -8,16 +8,20 @@ public class PlayerController : MonoBehaviour {
 
     private Collider2D m_collider;
     private Rigidbody2D m_rb;
-    [SerializeField] private float m_speed = 10.0f;
     [SerializeField] private KeyCode m_right;
     [SerializeField] private KeyCode m_left;
+    [SerializeField] private KeyCode m_sprint;
+    [SerializeField] private KeyCode m_jump;
+    [SerializeField] private KeyCode m_up;
+    [SerializeField] private KeyCode m_down;
+
+    [SerializeField] private float m_speed = 10.0f;
+    [SerializeField] private float m_sprintSpeed = 15;
 
     [SerializeField] private float m_jumpForce = 4;
     [SerializeField] private List<Transform> m_groundCheck;
     [SerializeField] private LayerMask ground;
-    [SerializeField] private KeyCode m_jump;
-    [SerializeField] private KeyCode m_up;
-    [SerializeField] private KeyCode m_down;
+
     private Transform m_climbPoint;
     private bool m_canClimb;
     private bool m_climbing;
@@ -28,8 +32,6 @@ public class PlayerController : MonoBehaviour {
         m_collider = GetComponent<BoxCollider2D>();
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        m_right = KeyCode.D;
-        m_left = KeyCode.A;
     }
 
     void Start()
@@ -80,11 +82,11 @@ public class PlayerController : MonoBehaviour {
     {
         if (Input.GetKey(m_right))
         {
-            m_rb.velocity += Vector2.right * m_speed * Time.deltaTime;
+            m_rb.velocity += Vector2.right * (Input.GetKey(m_sprint) ? m_sprintSpeed : m_speed) * Time.deltaTime;
         }
         else if (Input.GetKey(m_left))
         {
-            m_rb.velocity += Vector2.left * m_speed * Time.deltaTime;
+            m_rb.velocity += Vector2.left * (Input.GetKey(m_sprint) ? m_sprintSpeed : m_speed) * Time.deltaTime;
         }
     }
 
