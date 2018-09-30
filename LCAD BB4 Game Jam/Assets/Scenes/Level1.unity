@@ -425,41 +425,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 50504388084927392, guid: 7c1ef96183e9e5844ada9e076e93c7ed,
-        type: 2}
-      propertyPath: m_LinearDrag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114919390308382456, guid: 7c1ef96183e9e5844ada9e076e93c7ed,
-        type: 2}
-      propertyPath: ground.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 114919390308382456, guid: 7c1ef96183e9e5844ada9e076e93c7ed,
-        type: 2}
-      propertyPath: m_jump
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 114919390308382456, guid: 7c1ef96183e9e5844ada9e076e93c7ed,
-        type: 2}
-      propertyPath: m_up
-      value: 119
-      objectReference: {fileID: 0}
-    - target: {fileID: 114919390308382456, guid: 7c1ef96183e9e5844ada9e076e93c7ed,
-        type: 2}
-      propertyPath: m_down
-      value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 114919390308382456, guid: 7c1ef96183e9e5844ada9e076e93c7ed,
-        type: 2}
-      propertyPath: m_right
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114919390308382456, guid: 7c1ef96183e9e5844ada9e076e93c7ed,
-        type: 2}
-      propertyPath: m_left
-      value: 97
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1ef96183e9e5844ada9e076e93c7ed, type: 2}
   m_IsPrefabAsset: 0
