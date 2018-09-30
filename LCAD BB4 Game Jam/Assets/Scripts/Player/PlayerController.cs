@@ -17,17 +17,17 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private LayerMask ground;
     [SerializeField] private KeyCode m_jump;
     [SerializeField] private KeyCode m_up;
+    [SerializeField] private KeyCode m_down;
+    private Transform m_climbPoint;
+    private bool m_canClimb;
+    private bool m_climbing;
+    [SerializeField] private float m_climbSpeed = 2;
 
     private void Awake()
     {
         m_collider = GetComponent<BoxCollider2D>();
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-<<<<<<< HEAD
-=======
-        m_right = KeyCode.D;
-        m_left = KeyCode.A;
->>>>>>> 72a572dacea81d2c8d6ed3e92b7be186ec7261fe
     }
 
     void Start()
@@ -37,12 +37,23 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update()
     {
-<<<<<<< HEAD
-=======
         Movement();
->>>>>>> 72a572dacea81d2c8d6ed3e92b7be186ec7261fe
         Jump();
+        Climb();
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Hello");
+        m_canClimb = true;
+        m_climbPoint = collision.transform;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        m_canClimb = false;
+        m_climbPoint = null;
+    }
 
     private void Jump()
     {
@@ -51,8 +62,7 @@ public class PlayerController : MonoBehaviour {
             bool grounded = false;
             foreach (Transform point in m_groundCheck)
             {
-                RaycastHit2D hit = Physics2D.Linecast(point.position, point.position + Vector3.down * .05f, ground);
-                if (hit)
+                if (Physics2D.Linecast(point.position, point.position + Vector3.down * .05f, ground))
                 {
                     grounded = true;
                 }
@@ -73,6 +83,26 @@ public class PlayerController : MonoBehaviour {
         else if (Input.GetKey(m_left))
         {
             m_rb.velocity += Vector2.left * m_speed * Time.deltaTime;
+        }
+    }
+
+    private void Climb()
+    {
+        if (m_canClimb && !m_climbing && (Input.GetKey(m_up) || Input.GetKey(m_down)))
+        {
+            transform.position = new Vector3(m_climbPoint.position.x, transform.position.y, 0);
+            m_rb.gravityScale = 0;
+            m_rb.velocity = Vector3.zero;
+            m_climbing = true;
+        }
+        else if (m_canClimb && m_climbing)
+        {
+            transform.position += Vector3.up * Input.GetAxis("Vertical") * m_climbSpeed * Time.deltaTime;
+        }
+        if (Input.GetKey(m_right) || Input.GetKey(m_left))
+        {
+            m_rb.gravityScale = 1;
+            m_climbing = false;
         }
     }
 }
