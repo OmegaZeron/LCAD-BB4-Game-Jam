@@ -10,5 +10,5 @@ public class Enemy : ScriptableObject
     [SerializeField] private int m_health;
     [SerializeField] private int m_damage;
     [SerializeField] private int m_speed;
-    [SerializeField] private List<Ingredient> m_ingredient;
+    [SerializeField] private List<Collectibles> m_ingredient;
 }
