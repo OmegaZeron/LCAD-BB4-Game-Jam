@@ -111,9 +111,20 @@ public class EnemyAI : MonoBehaviour
         m_inCombat = false;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (enemy.combat == Enemy.Combat.Run)
+        {
+            m_enterCombat = true;
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        player = collision.gameObject.GetComponent<PlayerController>();
+        if (!player)
+        {
+            player = collision.gameObject.GetComponent<PlayerController>();
+        }
         if (enemy.combat == Enemy.Combat.Dig && player)
         {
             if (!player.Crouching)
@@ -134,12 +145,22 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage, bool crit)
     {
+        if (crit && !m_inCombat)
+        {
+            damage *= 2;
+        }
+        m_hp -= Mathf.Clamp(damage, 0, m_hp);
+        if (m_hp <= 0)
+        {
+            Die();
+        }
         // flash red if crit
         m_enterCombat = true;
     }
 
     private void Die()
     {
+        Debug.Log("Oh no I died!");
         // drop ingredients
         // death animation
         // Destroy(gameObject); // probably should be an animation event, and a lerping alpha change
