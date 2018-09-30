@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
         {
             m_hitPoints += value;
 
-            if (m_hitPoints < 0)
+            if (m_hitPoints <= 0)
             {
                 StartCoroutine(Death());
             }
