@@ -14,9 +14,13 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private KeyCode m_jump;
     [SerializeField] private KeyCode m_up;
     [SerializeField] private KeyCode m_down;
+    [SerializeField] private KeyCode m_crouch;
 
     [SerializeField] private float m_speed = 10.0f;
     [SerializeField] private float m_sprintSpeed = 15;
+    [SerializeField] private float m_crouchSpeed = 5;
+    public bool Sprinting { get; private set; }
+    public bool Crouching { get; private set; }
 
     [SerializeField] private float m_jumpForce = 4;
     [SerializeField] private List<Transform> m_groundCheck;
@@ -80,13 +84,29 @@ public class PlayerController : MonoBehaviour {
 
     private void Movement()
     {
+        Crouching = Input.GetKey(m_crouch);
+        Sprinting = Input.GetKey(m_sprint);
+        float spd = 0;
+        if (Crouching)
+        {
+            spd = m_crouchSpeed;
+        }
+        else if (Sprinting)
+        {
+            spd = m_sprintSpeed;
+        }
+        else
+        {
+            spd = m_speed;
+        }
+
         if (Input.GetKey(m_right))
         {
-            m_rb.velocity += Vector2.right * (Input.GetKey(m_sprint) ? m_sprintSpeed : m_speed) * Time.deltaTime;
+            m_rb.velocity += Vector2.right * spd * Time.deltaTime;
         }
         else if (Input.GetKey(m_left))
         {
-            m_rb.velocity += Vector2.left * (Input.GetKey(m_sprint) ? m_sprintSpeed : m_speed) * Time.deltaTime;
+            m_rb.velocity += Vector2.left * spd * Time.deltaTime;
         }
     }
 

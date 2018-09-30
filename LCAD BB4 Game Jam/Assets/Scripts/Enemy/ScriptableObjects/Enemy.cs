@@ -6,23 +6,24 @@ using UnityEngine;
 [System.Serializable]
 public class Enemy : ScriptableObject
 {
-    [SerializeField] private string m_name;
-    [SerializeField] private int m_health;
-    [SerializeField] private int m_damage;
-    [SerializeField] private int m_speed;
-    [SerializeField] private List<Collectibles> m_ingredient;
+    public string Name { get; private set; }
+    public int Health { get; private set; }
+    public int Damage { get; private set; }
+    public int Speed { get; private set; }
+    public List<Collectibles> Ingredients { get; private set; }
 
-    public enum movement
+    public enum Movement
     {
-        idle,
-        patrol
+        Idle,
+        Patrol
     }
+    public Movement movement;
 
-    public enum combat
+    public enum Combat
     {
-        dig,
-        run,
-        fight
+        Dig,
+        Run,
+        Fight
     }
-
+    public Combat combat;
 }
