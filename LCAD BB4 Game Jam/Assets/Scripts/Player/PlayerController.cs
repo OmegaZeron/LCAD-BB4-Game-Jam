@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour {
         m_collider = GetComponent<BoxCollider2D>();
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        m_right = KeyCode.D;
+        m_left = KeyCode.A;
     }
 
     void Start()
