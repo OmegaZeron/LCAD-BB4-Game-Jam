@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int m_hit_points = 100;
-    private int m_max_hit_points;
+    [SerializeField] private int m_hitPoints = 100;
+    private int m_maxHitPoints;
     [SerializeField] private float m_deathTime = 3.0f;
     WaitForSeconds m_waitforseconds;
 
     private void Start()
     {
-        m_max_hit_points = m_hit_points;
+        m_maxHitPoints = m_hitPoints;
         m_waitforseconds = new WaitForSeconds(m_deathTime);
     }
 
@@ -19,19 +19,19 @@ public class Health : MonoBehaviour
     {
         get
         {
-            return m_hit_points;
+            return m_hitPoints;
         }
         set
         {
-            m_hit_points += value;
+            m_hitPoints += value;
 
-            if (m_hit_points <= 0)
+            if (m_hitPoints <= 0)
             {
                 StartCoroutine(Death());
             }
-            else if (m_hit_points > m_max_hit_points)
+            else if (m_hitPoints > m_maxHitPoints)
             {
-                m_hit_points = m_max_hit_points;
+                m_hitPoints = m_maxHitPoints;
             }
         }
     }
