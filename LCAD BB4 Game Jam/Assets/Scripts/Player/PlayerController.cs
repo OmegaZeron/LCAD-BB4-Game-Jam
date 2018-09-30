@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour {
 
     private Collider2D m_collider;
     private Rigidbody2D m_rb;
+    [SerializeField] private float m_speed = 10.0f;
+    [SerializeField] private KeyCode m_right;
+    [SerializeField] private KeyCode m_left;
 
     [SerializeField] private float m_jumpForce = 4;
     [SerializeField] private List<Transform> m_groundCheck;
@@ -20,6 +23,11 @@ public class PlayerController : MonoBehaviour {
         m_collider = GetComponent<BoxCollider2D>();
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+<<<<<<< HEAD
+=======
+        m_right = KeyCode.D;
+        m_left = KeyCode.A;
+>>>>>>> 72a572dacea81d2c8d6ed3e92b7be186ec7261fe
     }
 
     void Start()
@@ -29,6 +37,10 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update()
     {
+<<<<<<< HEAD
+=======
+        Movement();
+>>>>>>> 72a572dacea81d2c8d6ed3e92b7be186ec7261fe
         Jump();
 	}
 
@@ -49,6 +61,18 @@ public class PlayerController : MonoBehaviour {
             {
                 m_rb.velocity += Vector2.up * m_jumpForce;
             }
+        }
+    }
+
+    private void Movement()
+    {
+        if (Input.GetKey(m_right))
+        {
+            m_rb.velocity += Vector2.right * m_speed * Time.deltaTime;
+        }
+        else if (Input.GetKey(m_left))
+        {
+            m_rb.velocity += Vector2.left * m_speed * Time.deltaTime;
         }
     }
 }
