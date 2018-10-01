@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 443156245}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Climbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,11 +395,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4730676787375680, guid: 7c1ef96183e9e5844ada9e076e93c7ed, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.82
       objectReference: {fileID: 0}
     - target: {fileID: 4730676787375680, guid: 7c1ef96183e9e5844ada9e076e93c7ed, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.06
       objectReference: {fileID: 0}
     - target: {fileID: 4730676787375680, guid: 7c1ef96183e9e5844ada9e076e93c7ed, type: 2}
       propertyPath: m_LocalPosition.z
