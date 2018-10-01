@@ -6,7 +6,7 @@ using UnityEngine;
 public class Collectibles : ScriptableObject
 {
     public string ingredientName;
-
+    public Sprite sprite;
     public int hot;
     public int cold;
     public int wet;
