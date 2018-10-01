@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 114210553222156678}
   m_Layer: 0
   m_Name: Horsea
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1963665678750218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.64, y: -10.5, z: 0}
+  m_LocalPosition: {x: 7.805462, y: 3.7468328, z: 0}
   m_LocalScale: {x: 2.3272727, y: 2.2857141, z: 1}
   m_Children:
   - {fileID: 4731966480602470}
@@ -187,8 +187,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 10c88f476fd28bc4d9b8f172a9f0303d, type: 2}
-  prefab: {fileID: 0}
-  m_groundCheck: []
+  prefab: {fileID: 114334545427643234, guid: 277c4e5b076037849950cd5d73e0dcc6, type: 2}
+  m_groundCheck:
+  - {fileID: 4731966480602470}
+  - {fileID: 4269104465382718}
+  - {fileID: 4487545234513710}
 --- !u!212 &212782578104414612
 SpriteRenderer:
   m_ObjectHideFlags: 1

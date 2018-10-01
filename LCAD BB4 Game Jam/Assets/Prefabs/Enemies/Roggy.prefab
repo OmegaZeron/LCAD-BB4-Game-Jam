@@ -52,9 +52,10 @@ GameObject:
   - component: {fileID: 212114676563562822}
   - component: {fileID: 61937579437341580}
   - component: {fileID: 50938891899865910}
+  - component: {fileID: 114973751670291606}
   m_Layer: 0
   m_Name: Roggy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1455789535764302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.73, y: -9.32, z: 0}
+  m_LocalPosition: {x: 10.340115, y: 3.3044577, z: 0}
   m_LocalScale: {x: 3.072, y: 2.363077, z: 1}
   m_Children:
   - {fileID: 4334836919600206}
@@ -174,6 +175,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!114 &114973751670291606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455789535764302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2754e7df0551c419511be885b7d5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 11400000, guid: fc74cd7bea6b6d14fa6ae69036f27fd5, type: 2}
+  prefab: {fileID: 114334545427643234, guid: 277c4e5b076037849950cd5d73e0dcc6, type: 2}
+  m_groundCheck:
+  - {fileID: 4334836919600206}
+  - {fileID: 4396419399458312}
+  - {fileID: 4158814986040500}
 --- !u!212 &212114676563562822
 SpriteRenderer:
   m_ObjectHideFlags: 1
