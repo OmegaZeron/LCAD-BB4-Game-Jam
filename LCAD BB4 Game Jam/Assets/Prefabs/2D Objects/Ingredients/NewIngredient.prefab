@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50239360111895764}
   - component: {fileID: 114334545427643234}
   m_Layer: 8
-  m_Name: Backineria
+  m_Name: NewIngredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

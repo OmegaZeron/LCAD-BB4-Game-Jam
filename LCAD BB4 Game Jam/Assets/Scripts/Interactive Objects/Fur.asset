@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972bfe4dcea8b8f48a0de0180f5b4e92, type: 3}
   m_Name: Fur
   m_EditorClassIdentifier: 
-  ingredientName: 
+  ingredientName: Fluffles
+  sprite: {fileID: 0}
   hot: 0
-  cold: 0
+  cold: 1
   wet: 0
-  dry: 0
+  dry: 3
   toxic: 0

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212088147029663738}
   - component: {fileID: 61190414217255244}
   - component: {fileID: 50563375983017066}
+  - component: {fileID: 114281117246776224}
   m_Layer: 0
   m_Name: Snuffles
   m_TagString: Untagged
@@ -82,7 +83,7 @@ Transform:
   m_GameObject: {fileID: 1229131522194196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 70.68, y: -14.4, z: 0}
-  m_LocalScale: {x: 0.9309091, y: 0.68266666, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4942723068760972}
   - {fileID: 4945194994492742}
@@ -174,6 +175,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!114 &114281117246776224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1229131522194196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2754e7df0551c419511be885b7d5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 11400000, guid: 0af8276c374bd2a43bc76d33f62c59b7, type: 2}
+  prefab: {fileID: 0}
+  m_groundCheck: []
 --- !u!212 &212088147029663738
 SpriteRenderer:
   m_ObjectHideFlags: 1
