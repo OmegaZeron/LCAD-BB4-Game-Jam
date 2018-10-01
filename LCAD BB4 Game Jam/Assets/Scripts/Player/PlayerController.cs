@@ -52,9 +52,11 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hello");
-        m_canClimb = true;
-        m_climbPoint = collision.transform;
+        if (collision.gameObject.tag == "Climbable")
+        {
+            m_canClimb = true;
+            m_climbPoint = collision.transform;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

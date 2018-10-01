@@ -6,10 +6,10 @@ using UnityEngine;
 [System.Serializable]
 public class Enemy : ScriptableObject
 {
-    public string Name { get; private set; }
-    public int Health { get; private set; }
-    public int Damage { get; private set; }
-    public int Speed { get; private set; }
+    public string enemyName;
+    public int health;
+    public int damage;
+    public int speed;
     public List<Collectibles> Ingredients { get; private set; }
 
     public enum Movement

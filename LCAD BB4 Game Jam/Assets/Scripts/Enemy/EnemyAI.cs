@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    SpriteRenderer sprite;
+
     public Enemy enemy;
     private int m_hp;
     private int m_damage;
@@ -19,13 +21,23 @@ public class EnemyAI : MonoBehaviour
 
 	void Start()
     {
-        gameObject.name = enemy.Name;
-        m_hp = enemy.Health;
-        m_damage = enemy.Damage;
-        m_speed = enemy.Speed;
+        sprite = GetComponent<SpriteRenderer>();
+
+        gameObject.name = enemy.enemyName;
+        m_hp = enemy.health;
+        m_damage = enemy.damage;
+        m_speed = enemy.speed;
         m_ingredientDrops = new List<Collectibles>(enemy.Ingredients);
 
         StartCoroutine(Move());
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            StartCoroutine(FlashRed());
+        }
     }
 
     private IEnumerator Move()
@@ -36,7 +48,7 @@ public class EnemyAI : MonoBehaviour
             {
                 if (!m_inCombat)
                 {
-                    // do stuff
+                    // do stuff?
                     if (m_enterCombat)
                     {
                         m_enterCombat = false;
@@ -54,12 +66,13 @@ public class EnemyAI : MonoBehaviour
             {
                 if (!m_inCombat)
                 {
-                    transform.position += amGoingLeft ? new Vector3(-1, 0, 0) : new Vector3(1, 0, 0) * m_speed;
+                    transform.position += (amGoingLeft ? new Vector3(-1, 0, 0) : new Vector3(1, 0, 0)) * m_speed;
                     foreach (Transform point in m_groundCheck)
                     {
                         if (!Physics2D.Linecast(point.position, point.position + Vector3.down * .05f))
                         {
                             amGoingLeft = !amGoingLeft;
+                            sprite.flipX = !sprite.flipX;
                         }
                     }
                     if (m_enterCombat)
@@ -98,8 +111,11 @@ public class EnemyAI : MonoBehaviour
         {
             while (m_inCombat)
             {
-                Vector3 heading = transform.position - player.transform.position;
-                transform.position += heading * m_speed;
+                if (player)
+                {
+                    Vector3 heading = (transform.position - player.transform.position).normalized;
+                    transform.position += heading * m_speed * Time.deltaTime;
+                }
                 yield return null;
             }
         }
@@ -113,7 +129,11 @@ public class EnemyAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (enemy.combat == Enemy.Combat.Run)
+        if (!player)
+        {
+            player = collision.gameObject.GetComponent<PlayerController>();
+        }
+        if (player && enemy.combat == Enemy.Combat.Run) // Testing only, will be on damaged later
         {
             m_enterCombat = true;
         }
@@ -136,11 +156,11 @@ public class EnemyAI : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (enemy.combat != Enemy.Combat.Dig)
+        if (collision.gameObject.GetComponent<PlayerController>())
         {
             m_inCombat = false;
+            player = null;
         }
-        player = null;
     }
 
     public void TakeDamage(int damage, bool crit)
@@ -154,14 +174,29 @@ public class EnemyAI : MonoBehaviour
         {
             Die();
         }
-        // flash red if crit
+        sprite.color = Color.red;
         m_enterCombat = true;
+    }
+
+    private IEnumerator FlashRed()
+    {
+        int time = 5;
+        while (time >= 0)
+        {
+            sprite.color = time % 2 == 0 ? Color.white : Color.red;
+            time--;
+            yield return new WaitForSeconds(.02f);
+        }
     }
 
     private void Die()
     {
         Debug.Log("Oh no I died!");
         // drop ingredients
+        foreach (Collectibles item in m_ingredientDrops)
+        {
+            // create new Ingredient object, add SO to it, drop it
+        }
         // death animation
         // Destroy(gameObject); // probably should be an animation event, and a lerping alpha change
     }
