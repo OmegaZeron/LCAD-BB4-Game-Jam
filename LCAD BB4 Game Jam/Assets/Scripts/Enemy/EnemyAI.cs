@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
 
     private PlayerController player;
 
-	void Start()
+	void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
 
@@ -124,6 +124,11 @@ public class EnemyAI : MonoBehaviour
     public void DigMove()
     {
         // find right distance to move, pop out on top of ground. If no viable distance, destroy self
+        transform.position += Vector3.right * 10;
+        if (!Physics2D.OverlapCircle(transform.position, .5f))
+        {
+            // aniamtion
+        }
         m_inCombat = false;
     }
 
@@ -192,10 +197,9 @@ public class EnemyAI : MonoBehaviour
     private void Die()
     {
         Debug.Log("Oh no I died!");
-        // drop ingredients
         foreach (Collectibles item in m_ingredientDrops)
         {
-            // create new Ingredient object, add SO to it, drop it
+            // create new Ingredient object, add SO to it and update, drop it
         }
         // death animation
         // Destroy(gameObject); // probably should be an animation event, and a lerping alpha change
