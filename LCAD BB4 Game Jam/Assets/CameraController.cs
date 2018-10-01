@@ -1,75 +1,47 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-[ExecuteInEditMode]
 public class CameraController : MonoBehaviour
 {
+    [SerializeField] private int focal_point_speed = 5;
+    [SerializeField] private int layer_difference = 1;
 
-    public Camera mainCamera;
-    public Camera farCamera;
-    public Camera nearCamera;
+    [SerializeField] private LayerMask layer5;
+    [SerializeField] private LayerMask layer4;
+    [SerializeField] private LayerMask layer3;
+    [SerializeField] private LayerMask layer2;
+    [SerializeField] private LayerMask layer1;
+    [SerializeField] private List<GameObject> background;
+    [SerializeField] private Transform player;
 
-    void OnEnable()
+    void Start()
     {
-        InitCameras();
+        layer3.value = focal_point_speed;
+        layer2.value = layer3.value - layer_difference;
+        layer1.value = layer2.value - layer_difference;
+        layer4.value = layer3.value + layer_difference;
+        layer5.value = layer4.value + layer_difference;
     }
 
-    void LateUpdate()
+    void Update()
     {
-        UpdateCameras();
-    }
-
-    public void InitCameras()
-    {
-        if (farCamera != null)
+        if (Input.GetKey(KeyCode.D))
         {
-            farCamera.transform.localPosition = Vector3.zero;
-            farCamera.transform.rotation = Quaternion.identity;
-            farCamera.transform.localScale = Vector3.one;
-            farCamera.orthographic = false;
-            farCamera.clearFlags = CameraClearFlags.SolidColor;
-            farCamera.depth = -2;
-            farCamera.transparencySortMode = TransparencySortMode.Orthographic;
+            foreach (GameObject go in background)
+            {
+                go.transform.Translate(Vector2.left * go.layer * Time.deltaTime);
+            }
         }
-
-        if (mainCamera != null)
+        else if (Input.GetKey(KeyCode.A))
         {
-            mainCamera.orthographic = true;
-            mainCamera.clearFlags = CameraClearFlags.Nothing;
-            mainCamera.depth = -1;
-        }
-
-        if (nearCamera != null)
-        {
-            nearCamera.transform.localPosition = Vector3.zero;
-            nearCamera.transform.rotation = Quaternion.identity;
-            nearCamera.transform.localScale = Vector3.one;
-            nearCamera.orthographic = false;
-            nearCamera.clearFlags = CameraClearFlags.Depth;
-            nearCamera.depth = 0;
-            nearCamera.transparencySortMode = TransparencySortMode.Orthographic;
+            foreach (GameObject go in background)
+            {
+                go.transform.Translate(Vector2.right * go.layer * Time.deltaTime);
+            }
         }
     }
 
-    public void UpdateCameras()
-    {
-        if (mainCamera == null || farCamera == null || nearCamera == null) return;
-
-        // orthoSize
-        float a = mainCamera.orthographicSize;
-        // distanceFromOrigin
-        float b = Mathf.Abs(mainCamera.transform.position.z);
-
-        //change clipping planes based on main camera z-position
-        farCamera.nearClipPlane = b;
-        farCamera.farClipPlane = mainCamera.farClipPlane;
-        nearCamera.farClipPlane = b;
-        nearCamera.nearClipPlane = mainCamera.nearClipPlane;
-
-        //update field fo view for parallax cameras
-        float fieldOfView = Mathf.Atan(a / b) * Mathf.Rad2Deg * 2f;
-        nearCamera.fieldOfView = farCamera.fieldOfView = fieldOfView;
-    }
-
+    
 }
 

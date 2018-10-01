@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 61482248442056146}
   - component: {fileID: 212446249496633148}
   - component: {fileID: 50624979770379358}
+  - component: {fileID: 114172088067177048}
   m_Layer: 8
   m_Name: Snotsworth
   m_TagString: Untagged
@@ -71,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -87,6 +88,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114172088067177048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1930307513449272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b12f8299b1f45c478467efaf63104b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 55108d69a8f357e4e9f6701aec610e47, type: 2}
 --- !u!212 &212446249496633148
 SpriteRenderer:
   m_ObjectHideFlags: 1
