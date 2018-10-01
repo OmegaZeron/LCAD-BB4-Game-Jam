@@ -30,6 +30,7 @@ public class CameraController : MonoBehaviour
         {
             foreach (GameObject go in background)
             {
+                if (gameObject.transform.position.x > -10)
                 go.transform.Translate(Vector2.left * go.layer * Time.deltaTime);
             }
         }
