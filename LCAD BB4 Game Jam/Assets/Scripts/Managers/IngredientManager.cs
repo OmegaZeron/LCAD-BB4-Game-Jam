@@ -6,7 +6,7 @@ public class IngredientManager : MonoBehaviour
 {
     public static IngredientManager Instance { get; private set; }
 
-    public List<Collectibles> ingredients { get; private set; }
+    public List<Pickup> ingredients { get; private set; }
 
     private void Awake()
     {
@@ -17,10 +17,10 @@ public class IngredientManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        ingredients = new List<Collectibles>();
+        ingredients = new List<Pickup>();
     }
 
-    public void AddIngredient(Collectibles ingredient)
+    public void AddIngredient(Pickup ingredient)
     {
         ingredients.Add(ingredient);
     }

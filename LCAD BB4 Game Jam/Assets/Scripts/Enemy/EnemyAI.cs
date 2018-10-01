@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     private int m_hp;
     private int m_damage;
     private int m_speed;
+    [SerializeField] private Pickup prefab;
     private List<Collectibles> m_ingredientDrops;
 
     private bool m_enterCombat = false;
@@ -200,6 +201,12 @@ public class EnemyAI : MonoBehaviour
         foreach (Collectibles item in m_ingredientDrops)
         {
             // create new Ingredient object, add SO to it and update, drop it
+            Pickup ingredient = Instantiate(prefab);
+            ingredient.item = item;
+            ingredient.Setup();
+            float rand = Random.Range(-1f, 1);
+            Rigidbody2D rb = ingredient.GetComponent<Rigidbody2D>();
+            rb.velocity = new Vector3(rand, 1, 0);
         }
         // death animation
         // Destroy(gameObject); // probably should be an animation event, and a lerping alpha change
