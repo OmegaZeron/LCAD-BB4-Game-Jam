@@ -1,7 +1,17 @@
 fileFormatVersion: 2
 guid: 8f85280a2b0a2744f8a8a6678e853e98
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: IngredientIcons_Sprite_0
+    21300002: IngredientIcons_Sprite_1
+    21300004: IngredientIcons_Sprite_2
+    21300006: IngredientIcons_Sprite_3
+    21300008: IngredientIcons_Sprite_4
+    21300010: IngredientIcons_Sprite_5
+    21300012: IngredientIcons_Sprite_6
+    21300014: IngredientIcons_Sprite_7
+    21300016: IngredientIcons_Sprite_8
+    21300018: IngredientIcons_Sprite_9
   externalObjects: {}
   serializedVersion: 6
   mipmaps:
@@ -40,7 +50,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,7 +60,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -69,10 +79,378 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 276
+        width: 225
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8aa5355d8c7ff4fa426faaddefe0ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 276
+        width: 220
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bdc8277aeeeca4eb6c16a70b09298d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 268
+        width: 232
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a85edb5611fa948b7e009f8b87c8f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 276
+        width: 223
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13030e1e0538644294aaead40bd5326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 271
+        width: 196
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9958af9fc5497a244806af43c34e0e8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 19
+        width: 201
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643efbffc075d0c4ab274c3926bfd688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 19
+        width: 157
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2e33595f82c70468d47f54fba5087d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 19
+        width: 203
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648c3678f81270f41b3806e07c4f5809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 7
+        width: 173
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6308aa8c3e19eeb4881ad26202e8cc05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IngredientIcons_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 12
+        width: 224
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acf2f1b1f825274d9275a60c73161ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 236, y: -12}
+      - {x: 169, y: -79}
+      - {x: 169, y: -251}
+      - {x: 212, y: -251}
+      - {x: 346, y: -141}
+      - {x: 346, y: -21}
+      - {x: 308, y: -12}
+    - - {x: 484, y: -16}
+      - {x: 406, y: -68}
+      - {x: 390, y: -108}
+      - {x: 390, y: -246}
+      - {x: 515, y: -246}
+      - {x: 618, y: -149}
+      - {x: 618, y: -29}
+      - {x: 588, y: -16}
+    - - {x: -563, y: -16}
+      - {x: -627, y: -53}
+      - {x: -627, y: -162}
+      - {x: -566, y: -239}
+      - {x: -469, y: -239}
+      - {x: -429, y: -217}
+      - {x: -422, y: -192}
+      - {x: -422, y: -50}
+      - {x: -452, y: -16}
+    - - {x: -315, y: -22}
+      - {x: -335, y: -35}
+      - {x: -335, y: -158}
+      - {x: -298, y: -239}
+      - {x: -220, y: -239}
+      - {x: -174, y: -143}
+      - {x: -174, y: -39}
+      - {x: -190, y: -22}
+    - - {x: -84, y: -12}
+      - {x: -108, y: -44}
+      - {x: -108, y: -239}
+      - {x: 99, y: -239}
+      - {x: 99, y: -97}
+      - {x: 39, y: -12}
+    - - {x: -13, y: 238}
+      - {x: -111, y: 184}
+      - {x: -118, y: 112}
+      - {x: -118, y: 26}
+      - {x: -107, y: 10}
+      - {x: 60, y: 10}
+      - {x: 118, y: 123}
+      - {x: 118, y: 235}
+      - {x: 111, y: 238}
+    - - {x: 410, y: 232}
+      - {x: 410, y: 42}
+      - {x: 432, y: 13}
+      - {x: 495, y: 13}
+      - {x: 610, y: 90}
+      - {x: 610, y: 161}
+      - {x: 597, y: 189}
+      - {x: 511, y: 232}
+    - - {x: -465, y: 188}
+      - {x: -519, y: 125}
+      - {x: -532, y: 109}
+      - {x: -496, y: 156}
+      - {x: -494, y: 202}
+      - {x: -503, y: 225}
+      - {x: -520, y: 227}
+      - {x: -595, y: 227}
+      - {x: -622, y: 207}
+      - {x: -627, y: 183}
+      - {x: -627, y: 161}
+      - {x: -619, y: 154}
+      - {x: -603, y: 153}
+      - {x: -612, y: 129}
+      - {x: -595, y: 23}
+      - {x: -587, y: 18}
+      - {x: -468, y: 18}
+      - {x: -398, y: 77}
+      - {x: -398, y: 180}
+      - {x: -452, y: 207}
+    - - {x: -161, y: 214}
+      - {x: -185, y: 227}
+      - {x: -370, y: 227}
+      - {x: -370, y: 18}
+      - {x: -189, y: 18}
+      - {x: -146, y: 50}
+      - {x: -146, y: 190}
+      - {x: -148, y: 208}
+    - - {x: 326, y: 148}
+      - {x: 334, y: 188}
+      - {x: 319, y: 219}
+      - {x: 265, y: 219}
+      - {x: 252, y: 206}
+      - {x: 242, y: 181}
+      - {x: 239, y: 200}
+      - {x: 225, y: 219}
+      - {x: 142, y: 219}
+      - {x: 142, y: 18}
+      - {x: 244, y: 18}
+      - {x: 369, y: 112}
+      - {x: 369, y: 154}
+      - {x: 340, y: 164}
+    - - {x: -176, y: 156}
+      - {x: -173, y: 157}
+      - {x: -173, y: 160}
+      - {x: -176, y: 161}
+      - {x: -178, y: 159}
     physicsShape: []
     bones: []
     spriteID: 3ec7a4ac6e90339468caf829e4214fa5
