@@ -37,11 +37,6 @@ public class PlayerController : MonoBehaviour {
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
-
-    void Start()
-    {
-		
-	}
 	
 	void Update()
     {
@@ -130,5 +125,10 @@ public class PlayerController : MonoBehaviour {
             m_rb.gravityScale = 1;
             m_climbing = false;
         }
+    }
+
+    public void TakeDamage()
+    {
+        IngredientManager.Instance.RemoveIngredientRand();
     }
 }
