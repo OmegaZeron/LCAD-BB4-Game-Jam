@@ -6,7 +6,7 @@ public class IngredientManager : MonoBehaviour
 {
     public static IngredientManager Instance { get; private set; }
 
-    public List<Pickup> ingredients { get; private set; }
+    public List<Pickup> ingredients;
 
     private void Awake()
     {

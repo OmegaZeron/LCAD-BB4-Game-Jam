@@ -16,6 +16,7 @@ public class Pickup : MonoBehaviour
 
     public void Setup()
     {
+        name = item.name;
         m_ingredientName = item.ingredientName;
         sprite = GetComponent<SpriteRenderer>();
         sprite.sprite = item.sprite;

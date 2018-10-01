@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Climbable
+  - Ingredient
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,6 +23,8 @@ TagManager:
   - Parallax Layer 3
   - Parallax Layer 4
   - Parallax Layer 5
+  - Ingredient
+  - Player
   - 
   - 
   - 

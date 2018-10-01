@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 
     private Collider2D m_collider;
     private Rigidbody2D m_rb;
+    private SpriteRenderer sr;
     [SerializeField] private KeyCode m_right;
     [SerializeField] private KeyCode m_left;
     [SerializeField] private KeyCode m_sprint;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float m_speed = 10.0f;
     [SerializeField] private float m_sprintSpeed = 15;
     [SerializeField] private float m_crouchSpeed = 5;
+    [SerializeField] private int damage = 1;
     public bool Sprinting { get; private set; }
     public bool Crouching { get; private set; }
 
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour {
         m_anim = GetComponent<Animator>();
         m_collider = GetComponent<BoxCollider2D>();
         m_rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         m_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 	
@@ -46,7 +49,23 @@ public class PlayerController : MonoBehaviour {
         Movement();
         Jump();
         Climb();
+        Attack();
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ingredient")
+        {
+            Pickup ing = collision.gameObject.GetComponent<Pickup>();
+            IngredientManager.Instance.AddIngredient(ing);
+            ing.GetComponent<Renderer>().enabled = false;
+            ing.GetComponent<Collider2D>().enabled = false;
+        }
+        else if (collision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(); 
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -112,11 +131,13 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey(m_right))
         {
             m_anim.SetBool("walking", true);
+            sr.flipX = true;
             m_rb.velocity += Vector2.right * spd * Time.deltaTime;
         }
         else if (Input.GetKey(m_left))
         {
             m_anim.SetBool("walking", true);
+            sr.flipX = false;
             m_rb.velocity += Vector2.left * spd * Time.deltaTime;
         }
         else
@@ -142,6 +163,23 @@ public class PlayerController : MonoBehaviour {
         {
             m_rb.gravityScale = 1;
             m_climbing = false;
+        }
+    }
+
+    private void Attack()
+    {
+        Debug.DrawLine(transform.position, transform.position + (sr.flipX ? Vector3.right : Vector3.left) * 2.5f, Color.red);
+        if (Input.GetButtonDown("Fire1"))
+        {
+            RaycastHit2D[] hits = Physics2D.LinecastAll(transform.position, transform.position + (sr.flipX ? Vector3.right : Vector3.left) * 2.5f);
+            foreach (RaycastHit2D hit in hits)
+            {
+                EnemyAI enemy = hit.collider.gameObject.GetComponent<EnemyAI>();
+                if (enemy)
+                {
+                    enemy.TakeDamage(damage, Crouching ? true : false);
+                }
+            }
         }
     }
 

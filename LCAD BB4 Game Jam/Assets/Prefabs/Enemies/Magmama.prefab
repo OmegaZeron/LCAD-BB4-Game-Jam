@@ -22,10 +22,11 @@ GameObject:
   - component: {fileID: 212910179654572258}
   - component: {fileID: 61585680563505202}
   - component: {fileID: 50245563256202076}
+  - component: {fileID: 114534910642583398}
   - component: {fileID: 114653660628944706}
   m_Layer: 0
   m_Name: Magmama
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1106465542732836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.38, y: -1.58, z: 0}
+  m_LocalPosition: {x: 6.1225133, y: 4.1747017, z: 0}
   m_LocalScale: {x: 5.12, y: 4.726154, z: 1}
   m_Children:
   - {fileID: 4585662060187322}
@@ -175,6 +176,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!114 &114534910642583398
 --- !u!114 &114653660628944706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,6 +189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 2b7d58ef5021b57449ed9d749805b0ed, type: 2}
+  prefab: {fileID: 114334545427643234, guid: 277c4e5b076037849950cd5d73e0dcc6, type: 2}
+  m_groundCheck:
+  - {fileID: 4585662060187322}
+  - {fileID: 4422695752552858}
+  - {fileID: 4139771706104422}
   prefab: {fileID: 0}
   m_groundCheck: []
 --- !u!212 &212910179654572258

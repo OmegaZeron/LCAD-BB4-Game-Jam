@@ -35,10 +35,10 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            StartCoroutine(FlashRed());
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    StartCoroutine(FlashRed());
+        //}
     }
 
     private IEnumerator Move()
@@ -62,17 +62,15 @@ public class EnemyAI : MonoBehaviour
         }
         else if (enemy.movement == Enemy.Movement.Patrol)
         {
-            bool amGoingLeft = true;
             while (true)
             {
                 if (!m_inCombat)
                 {
-                    transform.position += (amGoingLeft ? new Vector3(-1, 0, 0) : new Vector3(1, 0, 0)) * m_speed * Time.deltaTime;
+                    transform.position += (sprite.flipX ? new Vector3(1, 0, 0) : new Vector3(-1, 0, 0)) * m_speed * Time.deltaTime;
                     foreach (Transform point in m_groundCheck)
                     {
                         if (!Physics2D.Linecast(point.position, point.position + Vector3.down * .05f))
                         {
-                            amGoingLeft = !amGoingLeft;
                             sprite.flipX = !sprite.flipX;
                         }
                     }
@@ -174,14 +172,17 @@ public class EnemyAI : MonoBehaviour
         if (crit && !m_inCombat)
         {
             damage *= 2;
+            FlashRed();
         }
         m_hp -= Mathf.Clamp(damage, 0, m_hp);
         if (m_hp <= 0)
         {
             Die();
         }
-        sprite.color = Color.red;
-        m_enterCombat = true;
+        else
+        {
+            m_enterCombat = true;
+        }
     }
 
     private IEnumerator FlashRed()
@@ -201,14 +202,15 @@ public class EnemyAI : MonoBehaviour
         foreach (Collectibles item in m_ingredientDrops)
         {
             // create new Ingredient object, add SO to it and update, drop it
-            Pickup ingredient = Instantiate(prefab);
+            GetComponent<Collider2D>().enabled = false;
+            Pickup ingredient = Instantiate(prefab, transform.position, transform.rotation);
             ingredient.item = item;
             ingredient.Setup();
-            float rand = Random.Range(-1f, 1);
+            float rand = Random.Range(-3f, 3);
             Rigidbody2D rb = ingredient.GetComponent<Rigidbody2D>();
-            rb.velocity = new Vector3(rand, 1, 0);
+            rb.velocity = new Vector3(rand, 3, 0);
         }
         // death animation
-        // Destroy(gameObject); // probably should be an animation event, and a lerping alpha change
+        Destroy(gameObject); // probably should be an animation event, and a lerping alpha change
     }
 }
