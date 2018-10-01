@@ -66,7 +66,7 @@ public class EnemyAI : MonoBehaviour
             {
                 if (!m_inCombat)
                 {
-                    transform.position += (amGoingLeft ? new Vector3(-1, 0, 0) : new Vector3(1, 0, 0)) * m_speed;
+                    transform.position += (amGoingLeft ? new Vector3(-1, 0, 0) : new Vector3(1, 0, 0)) * m_speed * Time.deltaTime;
                     foreach (Transform point in m_groundCheck)
                     {
                         if (!Physics2D.Linecast(point.position, point.position + Vector3.down * .05f))
