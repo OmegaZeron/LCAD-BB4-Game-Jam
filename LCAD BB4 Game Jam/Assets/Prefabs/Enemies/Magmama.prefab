@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61585680563505202}
   - component: {fileID: 50245563256202076}
   - component: {fileID: 114534910642583398}
+  - component: {fileID: 114653660628944706}
   m_Layer: 0
   m_Name: Magmama
   m_TagString: Enemy
@@ -176,6 +177,7 @@ BoxCollider2D:
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
 --- !u!114 &114534910642583398
+--- !u!114 &114653660628944706
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,6 +194,8 @@ MonoBehaviour:
   - {fileID: 4585662060187322}
   - {fileID: 4422695752552858}
   - {fileID: 4139771706104422}
+  prefab: {fileID: 0}
+  m_groundCheck: []
 --- !u!212 &212910179654572258
 SpriteRenderer:
   m_ObjectHideFlags: 1

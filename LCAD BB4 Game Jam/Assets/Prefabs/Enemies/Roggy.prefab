@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 61937579437341580}
   - component: {fileID: 50938891899865910}
   - component: {fileID: 114973751670291606}
+  - component: {fileID: 114953434396858882}
   m_Layer: 0
   m_Name: Roggy
   m_TagString: Enemy
@@ -176,6 +177,7 @@ BoxCollider2D:
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
 --- !u!114 &114973751670291606
+--- !u!114 &114953434396858882
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,6 +194,8 @@ MonoBehaviour:
   - {fileID: 4334836919600206}
   - {fileID: 4396419399458312}
   - {fileID: 4158814986040500}
+  prefab: {fileID: 0}
+  m_groundCheck: []
 --- !u!212 &212114676563562822
 SpriteRenderer:
   m_ObjectHideFlags: 1

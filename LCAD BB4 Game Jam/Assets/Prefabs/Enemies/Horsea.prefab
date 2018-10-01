@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 212782578104414612}
   - component: {fileID: 61464948388321746}
   - component: {fileID: 50184334971026186}
-  - component: {fileID: 114210553222156678}
+  - component: {fileID: 114800227835195990}
   m_Layer: 0
   m_Name: Horsea
   m_TagString: Enemy
@@ -175,7 +175,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114210553222156678
+--- !u!114 &114800227835195990
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

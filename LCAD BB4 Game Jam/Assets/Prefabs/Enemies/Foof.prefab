@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 212529965343580776}
   - component: {fileID: 61637794296174182}
   - component: {fileID: 50352118168213414}
-  - component: {fileID: 114578285268925186}
+  - component: {fileID: 114256586723090170}
   m_Layer: 0
   m_Name: Foof
   m_TagString: Enemy
@@ -175,7 +175,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &114578285268925186
+--- !u!114 &114256586723090170
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 19fd9a5a2a497f245a3f6f5f6d51c586, type: 2}
-  prefab: {fileID: 114334545427643234, guid: 277c4e5b076037849950cd5d73e0dcc6, type: 2}
+  prefab: {fileID: 0}
   m_groundCheck: []
 --- !u!212 &212529965343580776
 SpriteRenderer:

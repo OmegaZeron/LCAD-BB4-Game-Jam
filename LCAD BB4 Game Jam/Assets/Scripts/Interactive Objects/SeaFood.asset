@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972bfe4dcea8b8f48a0de0180f5b4e92, type: 3}
   m_Name: SeaFood
   m_EditorClassIdentifier: 
-  ingredientName: 
+  ingredientName: Snotsworth
+  sprite: {fileID: 0}
   hot: 0
   cold: 0
   wet: 0
   dry: 0
-  toxic: 0
+  toxic: 3

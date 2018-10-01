@@ -52,7 +52,11 @@ GameObject:
   - component: {fileID: 212665314455756326}
   - component: {fileID: 61181132297513524}
   - component: {fileID: 50935558149276370}
+<<<<<<< HEAD
   - component: {fileID: 114461881981762946}
+=======
+  - component: {fileID: 114996762965604690}
+>>>>>>> e4dfb372db402e5d1c6c9f1046658ffcbdb842dc
   m_Layer: 0
   m_Name: Scarsuit
   m_TagString: Enemy
@@ -175,7 +179,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!114 &114461881981762946
+=======
+--- !u!114 &114996762965604690
+>>>>>>> e4dfb372db402e5d1c6c9f1046658ffcbdb842dc
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,11 +195,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: a01615d750faa9d4e9c472b6fb87447d, type: 2}
+<<<<<<< HEAD
   prefab: {fileID: 114334545427643234, guid: 277c4e5b076037849950cd5d73e0dcc6, type: 2}
   m_groundCheck:
   - {fileID: 4272022640457802}
   - {fileID: 4542950044324120}
   - {fileID: 4815995804607094}
+=======
+  prefab: {fileID: 0}
+  m_groundCheck: []
+>>>>>>> e4dfb372db402e5d1c6c9f1046658ffcbdb842dc
 --- !u!212 &212665314455756326
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972bfe4dcea8b8f48a0de0180f5b4e92, type: 3}
   m_Name: Liver
   m_EditorClassIdentifier: 
-  ingredientName: 
-  hot: 0
+  ingredientName: Nammer
+  sprite: {fileID: 0}
+  hot: 1
   cold: 0
-  wet: 0
+  wet: 2
   dry: 0
   toxic: 0
