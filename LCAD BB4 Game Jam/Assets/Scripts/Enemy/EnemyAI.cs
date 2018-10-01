@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
         m_hp = enemy.health;
         m_damage = enemy.damage;
         m_speed = enemy.speed;
-        m_ingredientDrops = new List<Collectibles>(enemy.Ingredients);
+        m_ingredientDrops = new List<Collectibles>(enemy.ingredients);
 
         StartCoroutine(Move());
     }
