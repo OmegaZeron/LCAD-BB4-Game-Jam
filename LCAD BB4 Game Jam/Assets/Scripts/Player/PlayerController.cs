@@ -31,8 +31,11 @@ public class PlayerController : MonoBehaviour {
     private bool m_climbing;
     [SerializeField] private float m_climbSpeed = 2;
 
+    private Animator m_anim;
+
     private void Awake()
     {
+        m_anim = GetComponent<Animator>();
         m_collider = GetComponent<BoxCollider2D>();
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -64,6 +67,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (Input.GetKeyDown(m_jump))
         {
+            m_anim.SetBool("jumping", false);
             bool grounded = false;
             foreach (Transform point in m_groundCheck)
             {
@@ -74,7 +78,12 @@ public class PlayerController : MonoBehaviour {
             }
             if (grounded)
             {
+                m_anim.SetBool("jumping", true);
                 m_rb.velocity += Vector2.up * m_jumpForce;
+            }
+            else
+            {
+                m_anim.SetBool("jumping", false);
             }
         }
     }
@@ -86,24 +95,33 @@ public class PlayerController : MonoBehaviour {
         float spd = 0;
         if (Crouching)
         {
+            m_anim.SetBool("walking", true);
             spd = m_crouchSpeed;
         }
         else if (Sprinting)
         {
+            m_anim.SetBool("walking", true);
             spd = m_sprintSpeed;
         }
         else
         {
+            m_anim.SetBool("walking", true);
             spd = m_speed;
         }
 
         if (Input.GetKey(m_right))
         {
+            m_anim.SetBool("walking", true);
             m_rb.velocity += Vector2.right * spd * Time.deltaTime;
         }
         else if (Input.GetKey(m_left))
         {
+            m_anim.SetBool("walking", true);
             m_rb.velocity += Vector2.left * spd * Time.deltaTime;
+        }
+        else
+        {
+            m_anim.SetBool("walking", false);
         }
     }
 
