@@ -11,5 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51bea6c8b860fd45ad8b35f3194a21f, type: 3}
   m_Name: Snuffles
   m_EditorClassIdentifier: 
+  enemyName: 
+  health: 0
+  damage: 0
+  speed: 0
+  ingredients:
+  - {fileID: 11400000, guid: 02d0cdbc525af8f4ba18678d4974446e, type: 2}
+  - {fileID: 11400000, guid: 9d896017898c1b44c84402d1b679f2db, type: 2}
+  - {fileID: 11400000, guid: 5762f4da9c8d75142ba082273241ad87, type: 2}
+  - {fileID: 11400000, guid: 2456b380affb8444386b8174e88b89b4, type: 2}
+  - {fileID: 11400000, guid: fd25401a411454340a54af14c3c769a7, type: 2}
   movement: 0
   combat: 0

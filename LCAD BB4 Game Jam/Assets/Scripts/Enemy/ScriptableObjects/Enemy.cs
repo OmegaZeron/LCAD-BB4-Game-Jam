@@ -10,7 +10,7 @@ public class Enemy : ScriptableObject
     public int health;
     public int damage;
     public int speed;
-    public List<Collectibles> Ingredients { get; private set; }
+    public List<Collectibles> ingredients;
 
     public enum Movement
     {

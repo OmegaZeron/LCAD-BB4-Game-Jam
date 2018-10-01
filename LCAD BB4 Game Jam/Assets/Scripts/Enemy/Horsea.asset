@@ -11,8 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51bea6c8b860fd45ad8b35f3194a21f, type: 3}
   m_Name: Horsea
   m_EditorClassIdentifier: 
-  m_name: 
-  m_health: 0
-  m_damage: 0
-  m_speed: 0
-  m_ingredient: []
+  enemyName: 
+  health: 0
+  damage: 0
+  speed: 0
+  ingredients:
+  - {fileID: 11400000, guid: 5762f4da9c8d75142ba082273241ad87, type: 2}
+  - {fileID: 11400000, guid: 02d0cdbc525af8f4ba18678d4974446e, type: 2}
+  - {fileID: 11400000, guid: 55108d69a8f357e4e9f6701aec610e47, type: 2}
+  - {fileID: 11400000, guid: cbf5704e5ba538b45bdb3d98a17f875d, type: 2}
+  movement: 0
+  combat: 0
