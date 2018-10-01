@@ -171,6 +171,9 @@ public class PlayerController : MonoBehaviour {
         Debug.DrawLine(transform.position, transform.position + (sr.flipX ? Vector3.right : Vector3.left) * 2.5f, Color.red);
         if (Input.GetButtonDown("Fire1"))
         {
+            m_anim.SetBool("attack", true);
+            m_anim.SetFloat("attackNum", Random.Range(0,2));
+
             RaycastHit2D[] hits = Physics2D.LinecastAll(transform.position, transform.position + (sr.flipX ? Vector3.right : Vector3.left) * 2.5f);
             foreach (RaycastHit2D hit in hits)
             {

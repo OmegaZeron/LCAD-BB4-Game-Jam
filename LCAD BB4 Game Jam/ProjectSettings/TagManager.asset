@@ -17,16 +17,14 @@ TagManager:
   - 
   - 
   - Ground
-  - Parallax
-  - Parallax Layer 1
-  - Parallax Layer 2
-  - Parallax Layer 3
-  - Parallax Layer 4
-  - Parallax Layer 5
+  - 
   - Ingredient
   - Player
-  - 
-  - 
+  - ParallaxLayer1
+  - ParallaxLayer2
+  - ParallaxLayer3
+  - ParallaxLayer4
+  - ParallaxLayer5
   - 
   - 
   - 

@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81987379}
   - component: {fileID: 81987380}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Sky (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94646344}
   - component: {fileID: 94646345}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 167282626}
   - component: {fileID: 167282627}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194605340}
   - component: {fileID: 194605339}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223868893}
   - component: {fileID: 223868894}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 264103412}
   - component: {fileID: 264103413}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275139668}
   - component: {fileID: 275139667}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 281846451}
   - component: {fileID: 281846452}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690901621564498, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1690901621564498, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
       propertyPath: m_Name
@@ -1087,7 +1087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400815609}
   - component: {fileID: 400815608}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446677531}
   - component: {fileID: 446677532}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1237,7 +1237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458723564}
   - component: {fileID: 458723565}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,7 +1312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 487439761}
   - component: {fileID: 487439762}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1387,7 +1387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 517419543}
   - component: {fileID: 517419544}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1462,7 +1462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 529325585}
   - component: {fileID: 529325586}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1542,7 +1542,7 @@ Animator:
   m_GameObject: {fileID: 531063238}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90c0070488efe124d805d4be37d1b5c6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1816,19 +1816,19 @@ MonoBehaviour:
   pc: {fileID: 531063243}
   layerMask5:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 65536
   layerMask4:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 32768
   layerMask3:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 16384
   layerMask2:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 8192
   layerMask1:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 4096
   layerParallax1: []
   layerParallax2: []
   layerParallax3: []
@@ -2020,7 +2020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665931330}
   - component: {fileID: 665931331}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2170,7 +2170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 708256739}
   - component: {fileID: 708256740}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2545,7 +2545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760689451}
   - component: {fileID: 760689452}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2700,7 +2700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945764015}
   - component: {fileID: 945764016}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Sky (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2775,7 +2775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 954556987}
   - component: {fileID: 954556988}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2850,7 +2850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047280978}
   - component: {fileID: 1047280979}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2925,7 +2925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085476330}
   - component: {fileID: 1085476329}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3150,7 +3150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104813276}
   - component: {fileID: 1104813277}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3225,7 +3225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1130357859}
   - component: {fileID: 1130357860}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3300,7 +3300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1138412339}
   - component: {fileID: 1138412340}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3416,7 +3416,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690901621564498, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
@@ -3435,7 +3435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1222593356}
   - component: {fileID: 1222593357}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Midground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3510,7 +3510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1223993740}
   - component: {fileID: 1223993741}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3585,7 +3585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231926173}
   - component: {fileID: 1231926174}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Midground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3735,7 +3735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1245299084}
   - component: {fileID: 1245299085}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Midground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3885,7 +3885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305051140}
   - component: {fileID: 1305051141}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3960,7 +3960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1332176560}
   - component: {fileID: 1332176559}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4187,7 +4187,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690901621564498, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
@@ -4559,7 +4559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690901621564498, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
@@ -4728,7 +4728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1512570826}
   - component: {fileID: 1512570827}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4803,7 +4803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537758663}
   - component: {fileID: 1537758664}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Midground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4953,7 +4953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566059601}
   - component: {fileID: 1566059602}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Sky (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5103,7 +5103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617010886}
   - component: {fileID: 1617010887}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Sky (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5219,7 +5219,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690901621564498, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
@@ -5233,7 +5233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620835529}
   - component: {fileID: 1620835530}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Sky (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5308,7 +5308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644563001}
   - component: {fileID: 1644563002}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Midground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5383,7 +5383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1651596541}
   - component: {fileID: 1651596542}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Midground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5458,7 +5458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689116549}
   - component: {fileID: 1689116550}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5538,7 +5538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748294399}
   - component: {fileID: 1748294398}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5613,7 +5613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1782187002}
   - component: {fileID: 1782187003}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5688,7 +5688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809349804}
   - component: {fileID: 1809349803}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5838,7 +5838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1832855779}
   - component: {fileID: 1832855780}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5918,7 +5918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888013427}
   - component: {fileID: 1888013426}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5993,7 +5993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904971323}
   - component: {fileID: 1904971322}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6068,7 +6068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917761938}
   - component: {fileID: 1917761937}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6293,7 +6293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2009341030}
   - component: {fileID: 2009341031}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6368,7 +6368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2012831054}
   - component: {fileID: 2012831055}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6443,7 +6443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2024869077}
   - component: {fileID: 2024869078}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6518,7 +6518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054500543}
   - component: {fileID: 2054500544}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6593,7 +6593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2058403641}
   - component: {fileID: 2058403642}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: bounce mushroom (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6743,7 +6743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116406851}
   - component: {fileID: 2116406852}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: mushroom2 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6930,7 +6930,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1690901621564498, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1690901621564498, guid: f2ad4d785d0f4f447a1214f54295ea30, type: 2}
       propertyPath: m_Name

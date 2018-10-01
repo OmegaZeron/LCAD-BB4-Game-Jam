@@ -21,11 +21,11 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
-        layerParallax5 = FindGameObjectsInLayer(14);
-        layerParallax4 = FindGameObjectsInLayer(13);
-        layerParallax3 = FindGameObjectsInLayer(12);
-        layerParallax2 = FindGameObjectsInLayer(11);
-        layerParallax1 = FindGameObjectsInLayer(10);
+        layerParallax5 = FindGameObjectsInLayer(16);
+        layerParallax4 = FindGameObjectsInLayer(15);
+        layerParallax3 = FindGameObjectsInLayer(14);
+        layerParallax2 = FindGameObjectsInLayer(13);
+        layerParallax1 = FindGameObjectsInLayer(12);
     }
 
     void Start()
